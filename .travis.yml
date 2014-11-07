@@ -1,1 +1,7 @@
 language: objective-c
+before_install:
+  - brew update
+  - brew doctor
+  - brew install cliclick
+  - sudo gem install cocoapods
+  - npm install -g coffee-script shelljs
