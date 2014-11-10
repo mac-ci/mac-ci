@@ -1,5 +1,6 @@
 language: objective-c
 before_install:
+  - echo "Testing 1 2 3"
   - brew update
   - brew doctor
   - brew install cliclick
