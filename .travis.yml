@@ -2,7 +2,7 @@ language: objective-c
 before_install:
   - echo "Testing 1 2 3"
   - brew update
-  - brew doctor
   - brew install cliclick
   - sudo gem install cocoapods
   - npm install -g coffee-script shelljs
+  - curl -v -o ngrok "https://api.equinox.io/1/Applications/ap_pJSFC5wQYkAyI0FIVwKYs9h1hW/Updates/Asset/ngrok.zip?os=darwin&arch=amd64&channel=stable"
