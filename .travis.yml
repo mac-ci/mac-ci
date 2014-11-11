@@ -17,6 +17,8 @@ before_install:
   - echo -e "new_password\nnew_password" | (sudo passwd root)
   - echo "/bin/bash --login second_script.sh &"
   - echo "./ngrok --help"
-  - ./ngrok -authtoken dN4FzCp-05sMA87Kf-gO -log=stdout -proto=tcp 22
+  - sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
+  - echo "./ngrok -authtoken dN4FzCp-05sMA87Kf-gO -log=stdout -proto=tcp 22"
+  - ./ngrok -authtoken dN4FzCp-05sMA87Kf-gO -log=stdout -pto=tcp 5900
   - echo "sleep 900"
   - echo "Done sleeping"
