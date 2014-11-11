@@ -15,6 +15,7 @@ before_install:
   - sudo systemsetup -setremotelogin on
   - sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
   - echo -e "new_password\nnew_password" | (sudo passwd root)
+  - echo -e "new_password\nnew_password" | (sudo passwd travis)
   - echo "/bin/bash --login second_script.sh &"
   - echo "./ngrok --help"
   - sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
