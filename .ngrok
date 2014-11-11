@@ -5,6 +5,6 @@ tunnels:
     proto:
       tcp: 22
   vnc:
-    remote_port: 65947
+    remote_port: 61947
     proto:
       tcp: 5900
