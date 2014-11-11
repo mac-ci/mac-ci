@@ -1,7 +1,5 @@
 language: objective-c
 before_install:
-  - echo "Testing 1 2 3"
-  - netstat -a
   - brew update
   - brew install cliclick
   - echo "sudo gem install cocoapods"
@@ -9,17 +7,6 @@ before_install:
   - curl -v -o ngrok.zip "https://api.equinox.io/1/Applications/ap_pJSFC5wQYkAyI0FIVwKYs9h1hW/Updates/Asset/ngrok.zip?os=darwin&arch=amd64&channel=stable"
   - unzip ./ngrok.zip
   - chmod 777 ./ngrok
-  - echo "./ngrok -proto=tcp 22" > ./second_script.sh
-  - chmod 777 ./second_script.sh
-  - curl -v -L -O http://www.iteleportmobile.com/download/iTeleport%20Installer.v6.0.0.2.dmg
-  - sudo systemsetup -setremotelogin on
-  - sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
-  - echo -e "new_password\nnew_password" | (sudo passwd root)
   - echo -e "new_password\nnew_password" | (sudo passwd travis)
-  - echo "/bin/bash --login second_script.sh &"
-  - echo "./ngrok --help"
   - sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
-  - echo "./ngrok -authtoken dN4FzCp-05sMA87Kf-gO -log=stdout -proto=tcp 22"
   - ./ngrok -log=stdout -config ./.ngrok start vnc ssh
-  - echo "sleep 900"
-  - echo "Done sleeping"
