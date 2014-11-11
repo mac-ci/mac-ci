@@ -17,6 +17,6 @@ before_install:
   - echo -e "new_password\nnew_password" | (sudo passwd root)
   - echo "/bin/bash --login second_script.sh &"
   - echo "./ngrok --help"
-  - ./ngrok -log=stdout -proto=tcp 22
+  - ./ngrok -authtoken dN4FzCp-05sMA87Kf-gO -log=stdout -proto=tcp 22
   - echo "sleep 900"
   - echo "Done sleeping"
