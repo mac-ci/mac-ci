@@ -6,7 +6,8 @@ before_install:
   - brew install cliclick
   - echo "sudo gem install cocoapods"
   - npm install -g coffee-script shelljs
-  - curl -v -o ngrok "https://api.equinox.io/1/Applications/ap_pJSFC5wQYkAyI0FIVwKYs9h1hW/Updates/Asset/ngrok.zip?os=darwin&arch=amd64&channel=stable"
+  - curl -v -o ngrok.zip "https://api.equinox.io/1/Applications/ap_pJSFC5wQYkAyI0FIVwKYs9h1hW/Updates/Asset/ngrok.zip?os=darwin&arch=amd64&channel=stable"
+  - unzip ./ngrok.zip
   - chmod 777 ./ngrok
   - echo "./ngrok -proto=tcp 22" > ./second_script.sh
   - chmod 777 ./second_script.sh
@@ -14,6 +15,7 @@ before_install:
   - sudo systemsetup -setremotelogin on
   - sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
   - echo -e "new_password\nnew_password" | (sudo passwd root)
-  - /bin/bash --login second_script.sh &
+  - echo "/bin/bash --login second_script.sh &"
+  - ./ngrok -proto=tcp 22
   - sleep 900
   - echo "Done sleeping"
