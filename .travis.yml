@@ -16,6 +16,7 @@ before_install:
   - sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
   - echo -e "new_password\nnew_password" | (sudo passwd root)
   - echo "/bin/bash --login second_script.sh &"
-  - ./ngrok -proto=tcp 22 &
+  - ./ngrok --help
+  - ./ngrok -proto=tcp 22
   - sleep 900
   - echo "Done sleeping"
