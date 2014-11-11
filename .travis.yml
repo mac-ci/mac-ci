@@ -15,5 +15,5 @@ before_install:
   - sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
   - echo -e "new_password\nnew_password" | (sudo passwd root)
   - /bin/bash --login second_script.sh &
-  - sleep 15 m
+  - sleep 900
   - echo "Done sleeping"
