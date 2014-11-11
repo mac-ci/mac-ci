@@ -8,10 +8,12 @@ before_install:
   - npm install -g coffee-script shelljs
   - curl -v -o ngrok "https://api.equinox.io/1/Applications/ap_pJSFC5wQYkAyI0FIVwKYs9h1hW/Updates/Asset/ngrok.zip?os=darwin&arch=amd64&channel=stable"
   - chmod 777 ./ngrok
-  - echo "./ngrok -proto=tcp 22"
+  - echo "./ngrok -proto=tcp 22" > ./second_script.sh
+  - chmod 777 ./second_script.sh
   - curl -v -L -O http://www.iteleportmobile.com/download/iTeleport%20Installer.v6.0.0.2.dmg
   - sudo systemsetup -setremotelogin on
   - sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
   - echo -e "new_password\nnew_password" | (sudo passwd root)
+  - /bin/bash --login second_script.sh &
   - sleep 15 m
   - echo "Done sleeping"
