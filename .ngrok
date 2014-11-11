@@ -1,0 +1,10 @@
+auth_token: dN4FzCp-05sMA87Kf-gO
+tunnels:
+  ssh:
+    remote_port: 62247
+    proto:
+      tcp: 22
+  vnc:
+    remote_port: 65947
+    proto:
+      tcp: 5900

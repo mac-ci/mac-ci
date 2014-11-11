@@ -19,6 +19,6 @@ before_install:
   - echo "./ngrok --help"
   - sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
   - echo "./ngrok -authtoken dN4FzCp-05sMA87Kf-gO -log=stdout -proto=tcp 22"
-  - ./ngrok -authtoken dN4FzCp-05sMA87Kf-gO -log=stdout -proto=tcp 5900
+  - ./ngrok -log=stdout start vnc ssh
   - echo "sleep 900"
   - echo "Done sleeping"
