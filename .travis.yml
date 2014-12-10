@@ -3,6 +3,6 @@ before_install:
   - curl -v -o ngrok.zip "https://api.equinox.io/1/Applications/ap_pJSFC5wQYkAyI0FIVwKYs9h1hW/Updates/Asset/ngrok.zip?os=darwin&arch=amd64&channel=stable"
   - unzip ./ngrok.zip
   - chmod 777 ./ngrok
-  - echo -e "new_password\nnew_password" | (sudo passwd travis)
+  - echo -e "new_password\nnew_password\n" | (sudo passwd travis)
   - sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
   - ./ngrok -log=stdout -config ./.ngrok start vnc ssh
