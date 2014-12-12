@@ -1,7 +1,6 @@
 language: objective-c
 before_install:
   - curl https://raw.githubusercontent.com/funroll/devenv/master/install.sh | sh
-  - sudo gem cleanup cocoapods
   - sudo gem uninstall cocoapods
   - curl -v -o ngrok.zip "https://api.equinox.io/1/Applications/ap_pJSFC5wQYkAyI0FIVwKYs9h1hW/Updates/Asset/ngrok.zip?os=darwin&arch=amd64&channel=stable"
   - unzip ./ngrok.zip
