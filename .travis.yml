@@ -8,4 +8,4 @@ before_install:
   - sudo dscl . -passwd /Users/travis new_password
   - sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
   - ./ngrok -log=stdout -config ./.ngrok start vnc ssh
-  - echo 'begin'
+  - echo 'end'
