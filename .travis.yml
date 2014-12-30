@@ -4,7 +4,7 @@ before_install:
   - curl https://raw.githubusercontent.com/funroll/devenv/master/install.sh | sh
   - curl -v -o ngrok.zip "https://api.equinox.io/1/Applications/ap_pJSFC5wQYkAyI0FIVwKYs9h1hW/Updates/Asset/ngrok.zip?os=darwin&arch=amd64&channel=stable"
   - unzip ./ngrok.zip
-  - chmod 777 ./ngrok
+  - chmod 744 ./ngrok
   - sudo dscl . -passwd /Users/travis new_password
   - sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate -configure -access -off -restart -agent -privs -all -allowAccessFor -allUsers
   - ./ngrok -log=stdout -config ./.ngrok start vnc ssh
